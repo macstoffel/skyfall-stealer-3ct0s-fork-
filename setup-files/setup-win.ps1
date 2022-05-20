@@ -1,6 +1,6 @@
 $pythonVersion = "3.10.4"
 $pythonUrl = "https://www.python.org/ftp/python/$pythonVersion/python-$pythonVersion.exe"
-$pythonDownloadPath = "$(Get-Location)\python-$pythonVersion.exe"
+$pythonDownloadPath = "python-$pythonVersion.exe"
 $pythonInstallDir = "$(Get-Location)\python$pythonVersion"
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
