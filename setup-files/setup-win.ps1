@@ -11,7 +11,8 @@ if (-not(Test-Path -Path $pythonDownloadPath -PathType Leaf)) {
     Write-Host "$pythonDownloadPath already exists."
 }
 
-& cmd.exe $pythonDownloadPath /quiet InstallAllUsers=0 TargetDir=$pythonInstallDir | Out-Null
+& .\python-$pythonVersion.exe
+# & $pythonDownloadPath /quiet InstallAllUsers=0 TargetDir=$pythonInstallDir | Out-Null
 & $pythonDownloadPath /quiet InstallAllUsers=0 TargetDir=$pythonInstallDir | Out-Null
 & "$pythonInstallDir\python.exe" -m venv venv
 & "$(Get-Location)\venv\Scripts\python.exe" -m pip install pyinstaller==4.2 cryptography==36.0.1 discord_webhook pycryptodome pypiwin32 cryptography==36.0.1
